@@ -3,6 +3,7 @@ import List from "../ui/List";
 import Button from "../ui/Button";
 import styled from "styled-components";
 import NoteDetails from "../feature/notes/NoteDetails";
+import Actions from "../ui/Actions";
 
 const listData = [
   {
@@ -59,6 +60,7 @@ export default function Notes() {
       </StyledList>
       {/* Select a note by id */}
       <NoteDetails />
+      <Actions />
     </>
   );
 }
