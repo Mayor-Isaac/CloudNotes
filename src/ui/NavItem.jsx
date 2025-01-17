@@ -1,26 +1,24 @@
-import React from 'react'
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-import {
-  HiOutlineTag,
-} from "react-icons/hi2";
+import { BiPurchaseTag } from "react-icons/bi";
 
 const StyledLi = styled.li`
-display : flex;
-gap: 1.2rem;
-margin: 1.5rem 0;
-cursor: pointer;
+  display: flex;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
 
-&:hover{
+  &:hover {
     font-weight: 700;
     border-bottom: 1px solid black;
-}
-`
+  }
+`;
 
-export default function NavItem({item}) {
-    
+export default function NavItem({ item }) {
   return (
-     <StyledLi><HiOutlineTag/> <p>{item}</p></StyledLi>
-           
-  )
+    <StyledLi>
+      <BiPurchaseTag /> <p>{item}</p>
+    </StyledLi>
+  );
 }

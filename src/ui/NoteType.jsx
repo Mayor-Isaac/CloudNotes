@@ -1,6 +1,8 @@
-import React from 'react'
-import {NavLink } from "react-router-dom"
-import styled from "styled-components"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { BiArchiveIn } from "react-icons/bi";
+import { HiOutlineHome } from "react-icons/hi2";
+import styled from "styled-components";
 
 const StyledNavLink = styled(NavLink)`
   &:link,
@@ -9,7 +11,7 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     gap: 1.2rem;
 
-    margin-bottom: 1.5rem ;
+    margin-bottom: 1.5rem;
     color: var(--color-grey-600);
     font-size: 1.6rem;
     font-weight: 500;
@@ -42,16 +44,20 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 const StyledNote = styled.div`
-border-bottom: 2px solid  var(--color-grey-50);
-`
+  border-bottom: 2px solid var(--color-grey-50);
+`;
 
 function NoteType() {
   return (
-    <StyledNote> 
-            <StyledNavLink to="/allNotes"> All Notes</StyledNavLink>
-            <StyledNavLink to="/archive"> Archived Notes</StyledNavLink>
-        </StyledNote>
-  )
+    <StyledNote>
+      <StyledNavLink to="note/allNotes">
+        <HiOutlineHome /> All Notes
+      </StyledNavLink>
+      <StyledNavLink to="note/archive">
+        <BiArchiveIn /> Archived Notes
+      </StyledNavLink>
+    </StyledNote>
+  );
 }
 
-export default NoteType
+export default NoteType;

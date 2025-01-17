@@ -1,12 +1,12 @@
-import {Outlet} from "react-router-dom"
-import styled from 'styled-components'
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 
-import Sidebar from "./Sidebar"
-import Header from "./Header"
+import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 const StyledAppLayout = styled.div`
   display: grid;
-  grid-template-columns: 18rem 1fr;
+  grid-template-columns: 22rem 1fr;
   grid-template-rows: auto 1fr;
   height: 100dvh;
 `;
@@ -19,22 +19,21 @@ const Container = styled.div`
   max-width: 120rem;
   margin: 0 auto;
   display: flex;
-  gap: 3.2rem;
-  flex-direction: column;
+  border-top: 1px solid var(--color-grey-100);
+  border-bottom: 1px solid var(--color-grey-100);
+  height: 100%;
 `;
-
 
 export default function AppLayout() {
   return (
     <StyledAppLayout>
-    <Sidebar/>
-    <Header/>
-    <Main>
+      <Sidebar />
+      <Header />
+      <Main>
         <Container>
-    <Outlet/>
-
+          <Outlet />
         </Container>
-    </Main>
+      </Main>
     </StyledAppLayout>
-  )
+  );
 }
